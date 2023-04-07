@@ -31,9 +31,17 @@ export const MenuOption = styled.div`
   font-weight: 700;
   font-size: 16px;
   padding: 15px 17px;
-  background: #ffffff;
+
   border-radius: 10px;
-  color: #676767;
+
+  ${(props) =>
+    props.option == props.selectedOption
+      ? `background: #FFC7C7;
+    border: 2px solid #000000;
+    color:#000`
+      : `color: #676767;
+      background: #ffffff;
+    `}
 `;
 export const MenuFooter = styled.div`
   display: flex;

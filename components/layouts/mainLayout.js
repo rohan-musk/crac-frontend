@@ -10,10 +10,7 @@ const MainLayout = ({ children }) => {
   return (
     <MainLayoutContainer>
       <Navbar />
-      <MainLayoutContent>
-        <MainLayoutHeader>Hi Space Grotesk</MainLayoutHeader>
-        {children}
-      </MainLayoutContent>
+      <MainLayoutContent>{children}</MainLayoutContent>
     </MainLayoutContainer>
   );
 };
