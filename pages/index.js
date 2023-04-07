@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <main>
         <div>
-          <p> Welcome to CrAC</p>
+          <p>brother</p>
         </div>
       </main>
     </>

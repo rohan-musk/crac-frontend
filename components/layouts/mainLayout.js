@@ -1,12 +1,20 @@
 import React from 'react';
-import Navbar from '@components/displays/navbar/navbar';
+import Navbar from '@components/displays/navbar/Navbar';
+import {
+  MainLayoutContainer,
+  MainLayoutContent,
+  MainLayoutHeader,
+} from './MainLayout.styled';
 
 const MainLayout = ({ children }) => {
   return (
-    <div>
+    <MainLayoutContainer>
       <Navbar />
-      {children}
-    </div>
+      <MainLayoutContent>
+        <MainLayoutHeader>Hi Space Grotesk</MainLayoutHeader>
+        {children}
+      </MainLayoutContent>
+    </MainLayoutContainer>
   );
 };
 

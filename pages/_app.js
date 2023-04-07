@@ -1,5 +1,6 @@
-import '@/styles/globals.css';
-import MainLayout from '@components/layouts/mainLayout';
+import '../styles/globals.css';
+
+import MainLayout from '@components/layouts/MainLayout';
 
 export default function App({ Component, pageProps }) {
   return (
