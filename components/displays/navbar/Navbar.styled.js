@@ -35,3 +35,18 @@ export const MenuOption = styled.div`
   border-radius: 10px;
   color: #676767;
 `;
+export const MenuFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+`;
+export const FooterOption = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+`;
