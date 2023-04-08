@@ -6,5 +6,5 @@ export const MainLayoutContainer = styled.div`
 `;
 export const MainLayoutContent = styled.div`
   margin-left: 350px;
-  width: calc(100%-350px);
+  width: calc(100% - 350px);
 `;
