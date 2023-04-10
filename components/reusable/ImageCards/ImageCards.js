@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FestImage, FestImageText } from './ImageCards.styled';
 
-const ImageCards = ({ text, wide }) => {
+const ImageCards = ({ text, wide, main }) => {
+  const [show, setShow] = useState(false);
   return (
-    <FestImage wide={wide}>
-      <FestImageText>{text}</FestImageText>
+    <FestImage
+      wide={wide}
+      main={main}
+      onMouseEnter={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
+    >
+      {show ? <FestImageText>{text}</FestImageText> : <></>}
     </FestImage>
   );
 };

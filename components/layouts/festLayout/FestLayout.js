@@ -16,6 +16,7 @@ const FestLayout = () => {
       <FestLayoutBody>
         <ImageCards text='Brother' />
         <ImageCards text='Mother' wide />
+        <ImageCards text='Team' main />
       </FestLayoutBody>
     </FestLayoutContainer>
   );

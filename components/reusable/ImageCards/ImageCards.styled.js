@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const FestImage = styled.div`
-  ${(props) => (props.wide ? `grid-column: span 2;` : `grid-column: span 1;`)}
+  ${(props) =>
+    props.main
+      ? `grid-column: span 3;`
+      : props.wide
+      ? `grid-column: span 2;`
+      : `grid-column: span 1;`}
   height:450px;
   width: 100%;
   background-color: #3510ff;
@@ -17,4 +22,13 @@ export const FestImageText = styled.div`
   height: 100%;
   color: #ffffff;
   padding: 8px 10px;
+  animation: fadeIn 0.4s;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
