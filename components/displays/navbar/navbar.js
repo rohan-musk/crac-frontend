@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Instagram from '@public/icons/Instagram.svg';
 import Mail from '@public/icons/Mail.svg';
 import Call from '@public/icons/Call.svg';
@@ -14,6 +15,15 @@ import {
 } from './Navbar.styled';
 const Navbar = () => {
   const [page, setPage] = useState(0);
+  const router = useRouter();
+  useEffect(() => {
+    console.log(router.pathname);
+    router.pathname === '/apogee' ? setPage(1) : null;
+    router.pathname === '/oasis' ? setPage(2) : null;
+    router.pathname === '/bosm' ? setPage(3) : null;
+    router.pathname === '/craxters' ? setPage(4) : null;
+    router.pathname === '/archives' ? setPage(5) : null;
+  }, [router.pathname]);
 
   return (
     <NavbarContainer>

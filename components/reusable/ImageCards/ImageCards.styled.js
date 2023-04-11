@@ -9,6 +9,7 @@ export const FestImage = styled.div`
       : `grid-column: span 1;`}
   height:450px;
   width: 100%;
+  min-width: 300px;
   background-color: #3510ff;
   border-radius: 10px;
 `;

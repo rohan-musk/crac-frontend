@@ -5,6 +5,7 @@ export const FestLayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 `;
 
 export const FestLayoutHeader = styled.div`
@@ -20,6 +21,7 @@ export const FestLayoutBody = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(auto-fill, 450px);
   gap: 50px;
-  padding: 100px 125px;
+  padding: 100px 50px;
   grid-auto-flow: row dense;
+  max-width: 1570px;
 `;
