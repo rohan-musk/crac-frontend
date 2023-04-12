@@ -34,6 +34,42 @@ const CraxtersLayout = () => {
             <MemberDesignation>Oasis Joint Coord</MemberDesignation>
           </Member>
         </MemberLayout>
+        <MemberHeading>Active CrAC Members</MemberHeading>
+        <MemberLayout>
+          <Member>
+            <MemberImage></MemberImage>
+            <MemberName>ROHAN ANIL MUSK</MemberName>
+            <MemberDesignation>Oasis Coord</MemberDesignation>
+          </Member>
+          <Member>
+            <MemberImage></MemberImage>
+            <MemberName>ROHAN MUSK</MemberName>
+            <MemberDesignation>Oasis Joint Coord</MemberDesignation>
+          </Member>
+          <Member>
+            <MemberImage></MemberImage>
+            <MemberName>ROHAN MUSK</MemberName>
+            <MemberDesignation>Oasis Joint Coord</MemberDesignation>
+          </Member>
+        </MemberLayout>
+        <MemberHeading>Ex CrAxters</MemberHeading>
+        <MemberLayout>
+          <Member>
+            <MemberImage></MemberImage>
+            <MemberName>ROHAN ANIL MUSK</MemberName>
+            <MemberDesignation>Oasis Coord</MemberDesignation>
+          </Member>
+          <Member>
+            <MemberImage></MemberImage>
+            <MemberName>ROHAN MUSK</MemberName>
+            <MemberDesignation>Oasis Joint Coord</MemberDesignation>
+          </Member>
+          <Member>
+            <MemberImage></MemberImage>
+            <MemberName>ROHAN MUSK</MemberName>
+            <MemberDesignation>Oasis Joint Coord</MemberDesignation>
+          </Member>
+        </MemberLayout>
       </CraxtersBody>
     </CraxtersLayoutContainer>
   );
