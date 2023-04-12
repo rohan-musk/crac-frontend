@@ -1,7 +1,8 @@
 import React from 'react';
+import CraxtersLayout from '@components/layouts/craxtersLayout/CraxtersLayout';
 
 const index = () => {
-  return <div>Individual</div>;
+  return <CraxtersLayout />;
 };
 
 export default index;
