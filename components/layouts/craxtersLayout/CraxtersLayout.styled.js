@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export const CraxtersLayoutContainer = styled.div`
   width: 100%;
@@ -44,7 +45,7 @@ export const MemberLayout = styled.div`
   flex-flow: wrap;
   padding: 20px 0px;
 `;
-export const Member = styled.div`
+export const Member = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;

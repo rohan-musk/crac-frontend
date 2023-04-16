@@ -23,53 +23,42 @@ const CraxtersLayout = () => {
       <CraxtersBody>
         <MemberHeading>CrAC Heads</MemberHeading>
         <MemberLayout>
-          <Member>
-            <MemberImage></MemberImage>
-            <MemberName>ROHAN ANIL MUSK</MemberName>
-            <MemberDesignation>Oasis Coord</MemberDesignation>
-          </Member>
-          <Member>
-            <MemberImage></MemberImage>
-            <MemberName>ROHAN MUSK</MemberName>
-            <MemberDesignation>Oasis Joint Coord</MemberDesignation>
-          </Member>
+            <Member href={'/craxters/'+1}>
+              <MemberImage></MemberImage>
+              <MemberName>ROHAN ANIL MUSK</MemberName>
+              <MemberDesignation>Oasis Coord</MemberDesignation>
+            </Member>
         </MemberLayout>
         <MemberHeading>Active CrAC Members</MemberHeading>
-        <MemberLayout>
+        {/* <MemberLayout>
           <Member>
             <MemberImage></MemberImage>
             <MemberName>ROHAN ANIL MUSK</MemberName>
-            <MemberDesignation>Oasis Coord</MemberDesignation>
           </Member>
           <Member>
             <MemberImage></MemberImage>
             <MemberName>ROHAN MUSK</MemberName>
-            <MemberDesignation>Oasis Joint Coord</MemberDesignation>
           </Member>
           <Member>
             <MemberImage></MemberImage>
             <MemberName>ROHAN MUSK</MemberName>
-            <MemberDesignation>Oasis Joint Coord</MemberDesignation>
           </Member>
-        </MemberLayout>
+        </MemberLayout> */}
         <MemberHeading>Ex CrAxters</MemberHeading>
-        <MemberLayout>
+        {/* <MemberLayout>
           <Member>
             <MemberImage></MemberImage>
             <MemberName>ROHAN ANIL MUSK</MemberName>
-            <MemberDesignation>Oasis Coord</MemberDesignation>
           </Member>
           <Member>
             <MemberImage></MemberImage>
             <MemberName>ROHAN MUSK</MemberName>
-            <MemberDesignation>Oasis Joint Coord</MemberDesignation>
           </Member>
           <Member>
             <MemberImage></MemberImage>
             <MemberName>ROHAN MUSK</MemberName>
-            <MemberDesignation>Oasis Joint Coord</MemberDesignation>
           </Member>
-        </MemberLayout>
+        </MemberLayout> */}
       </CraxtersBody>
     </CraxtersLayoutContainer>
   );

@@ -18,11 +18,11 @@ const Navbar = () => {
   const router = useRouter();
   useEffect(() => {
     console.log(router.pathname);
-    router.pathname === '/apogee' ? setPage(1) : null;
-    router.pathname === '/oasis' ? setPage(2) : null;
-    router.pathname === '/bosm' ? setPage(3) : null;
-    router.pathname === '/craxters' ? setPage(4) : null;
-    router.pathname === '/archives' ? setPage(5) : null;
+    router.pathname.includes('/apogee') ? setPage(1) : null;
+    router.pathname.includes('/oasis') ? setPage(2) : null;
+    router.pathname.includes( '/bosm') ? setPage(3) : null;
+    router.pathname.includes('/craxters') ? setPage(4) : null;
+    router.pathname.includes('/archives') ? setPage(5) : null;
   }, [router.pathname]);
 
   return (
