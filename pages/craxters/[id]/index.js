@@ -1,9 +1,7 @@
-import React from 'react'
-import ArtistLayout from '@components/layouts/artistLayout/ArtistLayout'
+import React from 'react';
+import ArtistLayout from '@components/layouts/artistLayout/ArtistLayout';
 const Details = () => {
-  return (
-    <ArtistLayout ></ArtistLayout>
-  )
-}
+  return <ArtistLayout>hi</ArtistLayout>;
+};
 
-export default Details
+export default Details;
