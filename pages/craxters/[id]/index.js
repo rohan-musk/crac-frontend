@@ -1,10 +1,8 @@
 import React from 'react'
-
+import ArtistLayout from '@components/layouts/artistLayout/ArtistLayout'
 const Details = () => {
   return (
-    <div>
-      mamamiyaaaaaa
-    </div>
+    <ArtistLayout ></ArtistLayout>
   )
 }
 
