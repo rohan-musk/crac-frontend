@@ -1,7 +1,7 @@
 import React from 'react';
 import ArtistLayout from '@components/layouts/artistLayout/ArtistLayout';
-const Details = () => {
-  return <ArtistLayout> </ArtistLayout>;
+const Work = () => {
+  return <ArtistLayout>About</ArtistLayout>;
 };
 
-export default Details;
+export default Work;

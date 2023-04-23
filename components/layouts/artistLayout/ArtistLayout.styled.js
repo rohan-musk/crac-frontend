@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Link from 'next/link';
+
 export const ArtistLayoutContainer = styled.div`
   width: 100%;
   display: flex;
@@ -34,4 +36,31 @@ export const ArtistName = styled.div`
   padding-top: 24px;
   font-weight: 700;
   font-size: 40px;
+`;
+export const ArtistNav = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+  padding: 0px 10px;
+  border-bottom: 1px solid #2d2d2d;
+`;
+export const ArtistNavOption = styled(Link)`
+  padding: 10px 0px;
+  ${(props) =>
+    props.option == props.selectedOption
+      ? `
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+    border-bottom: 2px solid #FF5656; `
+      : `
+  font-weight: 500;
+  font-size: 20px;
+  color: #676767; 
+`}
+`;
+export const ArtistNavContainer = styled.div`
+  width: 100%;
+  padding: 50px;
 `;

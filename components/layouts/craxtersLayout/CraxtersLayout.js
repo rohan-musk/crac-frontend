@@ -23,11 +23,11 @@ const CraxtersLayout = () => {
       <CraxtersBody>
         <MemberHeading>CrAC Heads</MemberHeading>
         <MemberLayout>
-            <Member href={'/craxters/'+1}>
-              <MemberImage></MemberImage>
-              <MemberName>ROHAN ANIL MUSK</MemberName>
-              <MemberDesignation>Oasis Coord</MemberDesignation>
-            </Member>
+          <Member href={'/craxters/' + 1 + '/work'}>
+            <MemberImage></MemberImage>
+            <MemberName>ROHAN ANIL MUSK</MemberName>
+            <MemberDesignation>Oasis Coord</MemberDesignation>
+          </Member>
         </MemberLayout>
         <MemberHeading>Active CrAC Members</MemberHeading>
         {/* <MemberLayout>
