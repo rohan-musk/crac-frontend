@@ -19,22 +19,28 @@ export const CraxtersLayoutHeader = styled.div`
 `;
 export const CraxtersHeaderText = styled.div`
   font-weight: 700;
-  font-size: 96px;
-  line-height: 163px;
+  font-size: 6rem;
   text-align: center;
   z-index: 2;
+  padding: 0px 30px;
   color: #ffffff;
+  @media (max-width: 750px) {
+    font-size: 3rem;
+  }
 `;
 export const CraxtersBody = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 50px 100px;
+  @media (max-width: 750px) {
+    padding: 50px 20px;
+  }
 `;
 export const MemberHeading = styled.div`
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2rem;
 
   color: #000000;
 `;
@@ -59,7 +65,7 @@ export const MemberImage = styled.div`
 `;
 export const MemberName = styled.div`
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1rem;
   padding: 12px 0px 0px 0px;
 
   text-align: center;
@@ -69,7 +75,7 @@ export const MemberName = styled.div`
 export const MemberDesignation = styled.div`
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 0.75rem;
   text-align: center;
   padding: 5px 0px 20px 0px;
 

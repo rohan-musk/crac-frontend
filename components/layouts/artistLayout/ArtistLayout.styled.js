@@ -35,7 +35,8 @@ export const ArtistImage = styled.div`
 export const ArtistName = styled.div`
   padding-top: 24px;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
+  text-align: center;
 `;
 export const ArtistNav = styled.div`
   display: flex;
@@ -51,16 +52,19 @@ export const ArtistNavOption = styled(Link)`
     props.option == props.selectedOption
       ? `
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1rem;
     color: #000000;
     border-bottom: 2px solid #FF5656; `
       : `
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1rem;
   color: #676767; 
 `}
 `;
 export const ArtistNavContainer = styled.div`
   width: 100%;
   padding: 50px;
+  @media (max-width: 750px) {
+    padding: 50px 20px;
+  }
 `;

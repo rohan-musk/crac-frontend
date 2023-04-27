@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import ImageCards from '@components/reusable/ImageCards/ImageCards';
+import ImageLayout from '@components/layouts/imageLayout/ImageLayout';
 import {
   FestLayoutContainer,
   FestLayoutHeader,
@@ -13,12 +13,7 @@ const FestLayout = () => {
       <FestLayoutHeader>
         <Image src='/images/oasisBanner.png' layout='fill' objectFit='cover' />
       </FestLayoutHeader>
-      <FestLayoutBody>
-        <ImageCards text='Brother' />
-        <ImageCards text='Mother' />
-        <ImageCards text='Mother' />
-        <ImageCards text='Team' main />
-      </FestLayoutBody>
+      <ImageLayout fest />
     </FestLayoutContainer>
   );
 };

@@ -12,13 +12,28 @@ export const FestImage = styled.div`
   min-width: 300px;
   background-color: #3510ff;
   border-radius: 10px;
+  @media (max-width: 1450px) {
+    ${(props) =>
+      props.main
+        ? `grid-column: span 2;`
+        : props.wide
+        ? `grid-column: span 2;`
+        : `grid-column: span 1;`}
+  }
+  @media (max-width: 750px) {
+    ${(props) =>
+      props.main
+        ? `grid-column: span 1;`
+        : props.wide
+        ? `grid-column: span 1;`
+        : `grid-column: span 1;`}
+  }
 `;
 export const FestImageText = styled.div`
   display: flex;
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 41px;
+  font-size: 2rem;
   align-items: flex-end;
   height: 100%;
   color: #ffffff;

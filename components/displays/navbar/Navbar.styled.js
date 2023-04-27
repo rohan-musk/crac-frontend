@@ -10,12 +10,14 @@ export const NavbarContainer = styled.div`
   height: 100vh;
   position: fixed;
   background: #efefef;
+  @media (max-width: 1150px) {
+    display: none;
+  }
 `;
 export const NavbarTitle = styled.div`
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 61px;
+  font-size: 3rem;
   color: #ff5656;
 `;
 export const MenuContainer = styled.div`
@@ -29,7 +31,7 @@ export const MenuOption = styled.div`
   height: 50px;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   padding: 15px 17px;
 
   border-radius: 10px;
@@ -55,6 +57,5 @@ export const FooterOption = styled.div`
   gap: 10px;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.75rem;
 `;
