@@ -16,6 +16,9 @@ export const CraxtersLayoutHeader = styled.div`
   align-items: center;
   aspect-ratio: 4.5 / 1;
   position: relative;
+  @media (max-width: 750px) {
+    height: 205px;
+  }
 `;
 export const CraxtersHeaderText = styled.div`
   font-weight: 700;

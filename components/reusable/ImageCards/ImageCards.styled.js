@@ -23,9 +23,9 @@ export const FestImage = styled.div`
   @media (max-width: 750px) {
     ${(props) =>
       props.main
-        ? `grid-column: span 1;`
+        ? `grid-column: span 1; height:200px;`
         : props.wide
-        ? `grid-column: span 1;`
+        ? `grid-column: span 1; height:200px;`
         : `grid-column: span 1;`}
   }
 `;
@@ -39,12 +39,15 @@ export const FestImageText = styled.div`
   color: #ffffff;
   padding: 8px 10px;
   animation: fadeIn 0.4s;
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
+
+  @media (min-width: 1150px) {
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 `;

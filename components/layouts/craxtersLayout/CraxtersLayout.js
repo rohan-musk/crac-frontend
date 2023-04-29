@@ -21,7 +21,7 @@ const CraxtersLayout = () => {
         <Image src='/images/craxters.png' layout='fill' objectFit='cover' />
       </CraxtersLayoutHeader>
       <CraxtersBody>
-        <MemberHeading>CrAC Heads</MemberHeading>
+        <MemberHeading>Heads</MemberHeading>
         <MemberLayout>
           <Member href={'/craxters/' + 1 + '/work'}>
             <MemberImage></MemberImage>
@@ -39,7 +39,7 @@ const CraxtersLayout = () => {
             <MemberDesignation>Oasis Coord</MemberDesignation>
           </Member>
         </MemberLayout>
-        <MemberHeading>Active CrAC Members</MemberHeading>
+        <MemberHeading>Members</MemberHeading>
         {/* <MemberLayout>
           <Member>
             <MemberImage></MemberImage>
@@ -54,7 +54,7 @@ const CraxtersLayout = () => {
             <MemberName>ROHAN MUSK</MemberName>
           </Member>
         </MemberLayout> */}
-        <MemberHeading>Ex CrAxters</MemberHeading>
+        <MemberHeading>Previous Members</MemberHeading>
         {/* <MemberLayout>
           <Member>
             <MemberImage></MemberImage>

@@ -23,6 +23,9 @@ export const ArtistDetails = styled.div`
   align-items: center;
   transform: translate(0, 150px);
   z-index: 2;
+  @media (max-width: 750px) {
+    transform: translate(0, 136px);
+  }
 `;
 
 export const ArtistImage = styled.div`
@@ -36,6 +39,9 @@ export const ArtistName = styled.div`
   padding-top: 24px;
   font-weight: 700;
   font-size: 2.5rem;
+  @media (max-width: 750px) {
+    font-size: 1.5rem;
+  }
   text-align: center;
 `;
 export const ArtistNav = styled.div`

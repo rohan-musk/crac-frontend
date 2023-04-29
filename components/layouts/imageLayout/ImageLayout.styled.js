@@ -21,7 +21,7 @@ export const ImageLayoutBody = styled.div`
     ${(props) =>
       props.fest
         ? `
-    padding: 100px 20px;`
+    padding: 50px 20px;`
         : `padding: 0px 20px 50px 20px;`}
   }
 `;
