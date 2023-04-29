@@ -4,32 +4,40 @@ import { useRouter } from 'next/router';
 import Instagram from '@public/icons/Instagram.svg';
 import Mail from '@public/icons/Mail.svg';
 import Call from '@public/icons/Call.svg';
+import Close from '@public/icons/Close.svg';
 
 import {
   NavbarContainer,
+  NavbarTop,
+  NavbarClose,
   NavbarTitle,
   MenuContainer,
   MenuOption,
   MenuFooter,
   FooterOption,
 } from './Navbar.styled';
-const Navbar = () => {
+const Navbar = ({ showNavbar, closeNavbar }) => {
   const [page, setPage] = useState(0);
   const router = useRouter();
   useEffect(() => {
     console.log(router.pathname);
     router.pathname.includes('/apogee') ? setPage(1) : null;
     router.pathname.includes('/oasis') ? setPage(2) : null;
-    router.pathname.includes( '/bosm') ? setPage(3) : null;
+    router.pathname.includes('/bosm') ? setPage(3) : null;
     router.pathname.includes('/craxters') ? setPage(4) : null;
     router.pathname.includes('/archives') ? setPage(5) : null;
   }, [router.pathname]);
 
   return (
-    <NavbarContainer>
-      <Link href='/' onClick={() => setPage(0)}>
-        <NavbarTitle>CrAC</NavbarTitle>
-      </Link>
+    <NavbarContainer showNavbar={showNavbar}>
+      <NavbarTop>
+        <Link href='/' onClick={() => setPage(0)}>
+          <NavbarTitle>CrAC</NavbarTitle>
+        </Link>
+        <NavbarClose onClick={() => closeNavbar()}>
+          <Close />
+        </NavbarClose>
+      </NavbarTop>
 
       <MenuContainer>
         <Link href='/apogee' onClick={() => setPage(1)}>

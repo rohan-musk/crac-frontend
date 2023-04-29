@@ -16,6 +16,9 @@ export const ArtistLayoutHeader = styled.div`
   aspect-ratio: 4.5 / 1;
   position: relative;
   margin-bottom: 150px;
+  @media (max-width: 750px) {
+    height: 205px;
+  }
 `;
 export const ArtistDetails = styled.div`
   display: flex;

@@ -11,9 +11,22 @@ export const NavbarContainer = styled.div`
   position: fixed;
   background: #efefef;
   @media (max-width: 1150px) {
+    ${(props) => (props.showNavbar ? `` : `display: none;`)}
+  }
+  z-index: 3;
+`;
+export const NavbarTop = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const NavbarClose = styled.div`
+  @media (min-width: 1150px) {
     display: none;
   }
 `;
+
 export const NavbarTitle = styled.div`
   font-style: normal;
   font-weight: 700;
