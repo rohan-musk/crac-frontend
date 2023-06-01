@@ -5,9 +5,9 @@ import { ImageLayoutBody } from './ImageLayout.styled';
 const ImageLayout = ({ fest }) => {
   return (
     <ImageLayoutBody fest={fest}>
-      <ImageCards text='Brother' />
-      <ImageCards text='Mother' />
-      <ImageCards text='Mother' />
+      <ImageCards text='image1' />
+      <ImageCards text='image2' />
+      <ImageCards text='image3' />
       <ImageCards text='Team' main />
     </ImageLayoutBody>
   );

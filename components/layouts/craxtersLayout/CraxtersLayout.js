@@ -18,7 +18,6 @@ const CraxtersLayout = () => {
     <CraxtersLayoutContainer>
       <CraxtersLayoutHeader>
         <CraxtersHeaderText>Meet the Team</CraxtersHeaderText>
-        <Image src='/images/craxters.png' layout='fill' objectFit='cover' />
       </CraxtersLayoutHeader>
       <CraxtersBody>
         <MemberHeading>Heads</MemberHeading>

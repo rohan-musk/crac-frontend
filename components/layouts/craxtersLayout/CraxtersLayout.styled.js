@@ -19,6 +19,16 @@ export const CraxtersLayoutHeader = styled.div`
   @media (max-width: 750px) {
     height: 205px;
   }
+
+  background: linear-gradient(
+    90.02deg,
+    #8870ff 0.02%,
+    #b960ff 36.23%,
+    #e17fff 72.67%,
+    #ffa692 99.98%
+  );
+  width: 100%;
+  height: 100%;
 `;
 export const CraxtersHeaderText = styled.div`
   font-weight: 700;
@@ -30,6 +40,7 @@ export const CraxtersHeaderText = styled.div`
   @media (max-width: 750px) {
     font-size: 3rem;
   }
+  mix-blend-mode: overlay;
 `;
 export const CraxtersBody = styled.div`
   width: 100%;

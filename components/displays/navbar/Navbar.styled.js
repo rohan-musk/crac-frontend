@@ -9,7 +9,14 @@ export const NavbarContainer = styled.div`
   gap: 15px;
   height: 100vh;
   position: fixed;
-  background: #efefef;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 66.43%,
+    #ffc5b8 77.89%,
+    #c891ff 89.35%,
+    #806cff 100%
+  );
   @media (max-width: 1150px) {
     ${(props) => (props.showNavbar ? `` : `display: none;`)}
   }
@@ -51,9 +58,8 @@ export const MenuOption = styled.div`
 
   ${(props) =>
     props.option == props.selectedOption
-      ? `background: #FFC7C7;
-    border: 2px solid #000000;
-    color:#000`
+      ? `background: #000;
+    color:#fff`
       : `color: #676767;
       background: #ffffff;
     `}
@@ -71,4 +77,5 @@ export const FooterOption = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 0.75rem;
+  color: #fff;
 `;
