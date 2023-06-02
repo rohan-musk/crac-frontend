@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from '@components/displays/navbar/Navbar';
+import Background from '@components/reusable/Background/Background';
 import NavbarIcon from '@public/icons/Navbar.svg';
+import useComponentDimensions from '@lib/hooks/useComponentDimensions';
 
 import {
   MainLayoutContainer,
@@ -10,6 +12,7 @@ import {
 
 const MainLayout = ({ children }) => {
   const [showNavbar, setShowNavbar] = useState(false);
+  const [contententDimensions, contentRef] = useComponentDimensions();
   const closeNavbar = () => {
     setShowNavbar(false);
   };
@@ -19,7 +22,11 @@ const MainLayout = ({ children }) => {
       <NavbarClick showNavbar={showNavbar}>
         <NavbarIcon onClick={() => setShowNavbar(true)} />
       </NavbarClick>
-      <MainLayoutContent>{children}</MainLayoutContent>
+      <Background
+        dimensions={contententDimensions}
+        class='invisible-scrollbar'
+      />
+      <MainLayoutContent ref={contentRef}>{children}</MainLayoutContent>
     </MainLayoutContainer>
   );
 };
