@@ -34,7 +34,7 @@ export const ArtistDetails = styled.div`
 export const ArtistImage = styled.div`
   width: 150px;
   height: 150px;
-  background-color: #3510ff;
+  background-color: #555;
   border-radius: 75px;
   border: 4px solid #ffffff;
 `;

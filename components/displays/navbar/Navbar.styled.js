@@ -61,7 +61,7 @@ export const MenuOption = styled.div`
       ? `background: #000;
     color:#fff`
       : `color: #676767;
-      background: #ffffff;
+      background: none;
     `}
 `;
 export const MenuFooter = styled.div`

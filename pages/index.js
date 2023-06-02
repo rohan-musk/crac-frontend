@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import HomeLayout from '@components/layouts/HomeLayout/HomeLayout';
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       </Head>
       <main>
         <div>
-          <p>brother</p>
+          <HomeLayout />
         </div>
       </main>
     </>

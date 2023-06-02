@@ -10,7 +10,7 @@ export const FestImage = styled.div`
   height:450px;
   width: 100%;
   min-width: 300px;
-  background-color: #3510ff;
+  background-color: #555;
   border-radius: 10px;
   @media (max-width: 1450px) {
     ${(props) =>
