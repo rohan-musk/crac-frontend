@@ -11,8 +11,8 @@ export const LinkEditorLink = styled.div`
 `;
 export const LinkEditorInput = styled.input`
   width: 300px;
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 1em;
   border-radius: 5px;
   border: 1px solid black;
+  background: transparent;
 `;

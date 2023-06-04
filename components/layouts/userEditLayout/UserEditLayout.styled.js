@@ -48,4 +48,6 @@ export const AboutMeEditor = styled.textarea`
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1em;
   border-radius: 10px;
+  background: transparent;
+  border-color: #696969;
 `;

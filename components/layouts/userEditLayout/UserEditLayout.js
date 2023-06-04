@@ -25,7 +25,7 @@ const UserEditLayout = () => {
           <LinksEditor title='Instagram' link='@rohanmusk' />
           <LinksEditor title='Mail' link='rohanmuskawad1201@gmail.com' />
         </EditContainer>
-        <EditContainer tag='Artworks'>
+        <EditContainer tag='Artworks' pad>
           <FileUploader />
         </EditContainer>
       </UserEditContainer>
