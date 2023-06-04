@@ -20,7 +20,7 @@ export const LoginButton = styled(Link)`
 `;
 export const AdminOption = styled.div`
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1em;
 
   color: #727272;
 `;

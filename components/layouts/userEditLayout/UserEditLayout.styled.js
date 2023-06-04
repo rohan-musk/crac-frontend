@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 
-export const HomeHeader = styled.div`
+export const UserEditHeader = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -14,7 +14,7 @@ export const HomeHeader = styled.div`
     gap: 20px;
   }
 `;
-export const HomeHeaderText = styled.div`
+export const UserEditText = styled.div`
   font-weight: 500;
   font-size: 1.5em;
   color: #727272;
@@ -22,32 +22,30 @@ export const HomeHeaderText = styled.div`
     font-size: 1em;
   }
 `;
-export const HomeHeaderButton = styled(Link)`
+export const UserEditHeaderButton = styled(Link)`
   font-weight: 500;
   font-size: 1.5em;
-  background: #0f9d58;
+  background: #db4437;
   color: #fff;
   padding: 10px 50px;
   border-radius: 10px;
   @media (max-width: 750px) {
     font-size: 1em;
-    padding: 10px 30px;
+    padding: 10px;
   }
 `;
-export const HomeText = styled.div`
+export const UserEditContainer = styled.div`
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+`;
+export const AboutMeEditor = styled.textarea`
+  width: 100%;
+  height: 200px;
   padding: 20px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 6em;
-  background: linear-gradient(90deg, #ff5656 0%, #816cff 98.19%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  @media (max-width: 1500px) {
-    font-size: 4em;
-  }
-  @media (max-width: 750px) {
-    font-size: 2.5em;
-  }
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1em;
+  border-radius: 10px;
 `;
