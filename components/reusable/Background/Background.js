@@ -6,7 +6,7 @@ const Background = ({ dimensions }) => {
   let numberOfBlobs = containerHeight / 800;
   let rows = [];
   for (let i = 1; i < numberOfBlobs; i++) {
-    rows.push(<BackgroundBlobs componentNumber={i} />);
+    rows.push(<BackgroundBlobs componentNumber={i} key={i} />);
   }
   return (
     <BackgroundContainer style={{ height: containerHeight }}>

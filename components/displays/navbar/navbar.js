@@ -20,7 +20,6 @@ const Navbar = ({ showNavbar, closeNavbar }) => {
   const [page, setPage] = useState(0);
   const router = useRouter();
   useEffect(() => {
-    console.log(router.pathname);
     router.pathname.includes('/apogee') ? setPage(1) : null;
     router.pathname.includes('/oasis') ? setPage(2) : null;
     router.pathname.includes('/bosm') ? setPage(3) : null;

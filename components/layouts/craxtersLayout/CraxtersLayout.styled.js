@@ -74,7 +74,7 @@ export const Member = styled(Link)`
 export const MemberImage = styled.div`
   width: 150px;
   height: 150px;
-  background-color: #3510ff;
+  background-color: #555;
   border-radius: 75px;
 `;
 export const MemberName = styled.div`
