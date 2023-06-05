@@ -3,8 +3,10 @@ import {
   LinkEditorContainer,
   LinkEditorTitle,
   LinkEditorLink,
+  LinkEditIcon,
   LinkEditorInput,
 } from './LinksEditor.styled';
+import Edit from '@public/icons/Edit.svg';
 
 const LinksEditor = ({ title, link }) => {
   const [editOption, setEditOption] = useState(false);
@@ -16,13 +18,13 @@ const LinksEditor = ({ title, link }) => {
       ) : (
         <LinkEditorLink>{link}</LinkEditorLink>
       )}
-      <div
+      <LinkEditIcon
         onClick={() => {
           setEditOption(!editOption);
         }}
       >
-        Edit
-      </div>
+        <Edit />
+      </LinkEditIcon>
     </LinkEditorContainer>
   );
 };

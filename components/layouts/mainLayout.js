@@ -20,7 +20,7 @@ const MainLayout = ({ children }) => {
     <MainLayoutContainer>
       <Navbar showNavbar={showNavbar} closeNavbar={closeNavbar} />
       <NavbarClick showNavbar={showNavbar}>
-        <NavbarIcon onClick={() => setShowNavbar(true)} />
+        <NavbarIcon onClick={() => setShowNavbar(true)} fill='#000' />
       </NavbarClick>
       <Background
         dimensions={contententDimensions}

@@ -6,6 +6,12 @@ export const LinkEditorContainer = styled.div`
   flex-wrap: wrap;
 `;
 export const LinkEditorTitle = styled.div``;
+export const LinkEditIcon = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+`;
+
 export const LinkEditorLink = styled.div`
   color: #816cff;
 `;

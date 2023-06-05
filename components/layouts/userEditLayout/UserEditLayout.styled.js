@@ -15,6 +15,7 @@ export const UserEditHeader = styled.div`
   }
 `;
 export const UserEditText = styled.div`
+  text-align: right;
   font-weight: 500;
   font-size: 1.5em;
   color: #727272;
@@ -23,6 +24,8 @@ export const UserEditText = styled.div`
   }
 `;
 export const UserEditHeaderButton = styled(Link)`
+  text-align: center;
+
   font-weight: 500;
   font-size: 1.5em;
   background: #db4437;

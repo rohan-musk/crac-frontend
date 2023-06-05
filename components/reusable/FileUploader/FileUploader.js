@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   FileUploaderContainer,
   FileUploaderEditor,
@@ -9,9 +9,13 @@ import {
   FileUploaderDescription,
   FileUploaderSubmit,
   FileDisplay,
+  FileDisplayIcon,
 } from './FileUploader.styled';
+import Edit from '@public/icons/Edit.svg';
+import Trash from '@public/icons/Trash.svg';
 
 const FileUploader = () => {
+  const [showIcons, setShowIcons] = useState(false);
   return (
     <FileUploaderContainer>
       <FileUploaderEditor>
@@ -24,10 +28,21 @@ const FileUploader = () => {
         </FileUploaderContent>
       </FileUploaderEditor>
       <AllFilesDisplay>
-        <FileDisplay />
-        <FileDisplay />
-        <FileDisplay />
-        <FileDisplay />
+        <FileDisplay
+          onMouseEnter={() => setShowIcons(true)}
+          onMouseLeave={() => setShowIcons(false)}
+        >
+          {showIcons && (
+            <>
+              <FileDisplayIcon>
+                <Edit fill='#fff' />
+              </FileDisplayIcon>
+              <FileDisplayIcon>
+                <Trash fill='#FF5656' />
+              </FileDisplayIcon>
+            </>
+          )}
+        </FileDisplay>
       </AllFilesDisplay>
     </FileUploaderContainer>
   );

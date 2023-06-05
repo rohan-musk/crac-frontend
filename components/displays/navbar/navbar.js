@@ -70,17 +70,17 @@ const Navbar = ({ showNavbar, closeNavbar }) => {
       <MenuFooter>
         <Link href='https://www.instagram.com/crac_bitspilani/?hl=en'>
           <FooterOption>
-            <Instagram />
+            <Instagram fill='#fff' />
             @crac_bitspilani
           </FooterOption>
         </Link>
 
         <FooterOption>
-          <Call />
+          <Call fill='#fff' />
           +91 98925 00584
         </FooterOption>
         <FooterOption>
-          <Mail />
+          <Mail fill='#fff' />
           f20201798@bits.pilani-bits.ac.in
         </FooterOption>
       </MenuFooter>

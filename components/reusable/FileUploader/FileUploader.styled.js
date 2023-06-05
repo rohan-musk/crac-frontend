@@ -64,4 +64,25 @@ export const FileDisplay = styled.div`
   height: 210px;
   background: #555;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+`;
+export const FileDisplayIcon = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: fadeIn 0.4s;
+
+  @media (min-width: 1150px) {
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
 `;
