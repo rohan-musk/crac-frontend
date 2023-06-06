@@ -10,7 +10,7 @@ const HomeLayout = () => {
   return (
     <div>
       <HomeHeader>
-        <HomeHeaderText>Are you a crac member?</HomeHeaderText>
+        <HomeHeaderText>Are you a craxter?</HomeHeaderText>
         <HomeHeaderButton href='/login'>Login</HomeHeaderButton>
       </HomeHeader>
       <HomeText>
