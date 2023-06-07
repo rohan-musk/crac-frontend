@@ -46,6 +46,11 @@ export const ArtistName = styled.div`
     font-size: 1.5rem;
   }
   text-align: center;
+  background: linear-gradient(90deg, #000000 0%, #816cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 `;
 export const ArtistNav = styled.div`
   display: flex;

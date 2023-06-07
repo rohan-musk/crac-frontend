@@ -51,12 +51,14 @@ export const CraxtersBody = styled.div`
     padding: 50px 20px;
   }
 `;
-export const MemberHeading = styled.div`
-  font-style: normal;
+export const MemberHeading = styled.p`
   font-weight: 700;
-  font-size: 2rem;
-
-  color: #000000;
+  font-size: 2em;
+  background: linear-gradient(90deg, #000000 0%, #816cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 `;
 export const MemberLayout = styled.div`
   display: flex;
