@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Navbar from '@components/displays/navbar/Navbar';
 import Background from '@components/reusable/Background/Background';
 import NavbarIcon from '@public/icons/Navbar.svg';
@@ -16,6 +17,15 @@ const MainLayout = ({ children }) => {
   const closeNavbar = () => {
     setShowNavbar(false);
   };
+
+  const baseURL = 'http://localhost:3001/contactDetails';
+  const [post, setPost] = useState(null);
+  useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      console.log(response.data);
+    });
+  }, []);
+
   return (
     <MainLayoutContainer>
       <Navbar showNavbar={showNavbar} closeNavbar={closeNavbar} />

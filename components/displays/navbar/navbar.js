@@ -16,6 +16,7 @@ import {
   MenuFooter,
   FooterOption,
 } from './Navbar.styled';
+
 const Navbar = ({ showNavbar, closeNavbar }) => {
   const [page, setPage] = useState(0);
   const router = useRouter();
