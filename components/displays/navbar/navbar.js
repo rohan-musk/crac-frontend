@@ -81,19 +81,18 @@ const Navbar = ({ showNavbar, closeNavbar }) => {
           href={`https://www.instagram.com/` + navData?.data.contactData.insta}
         >
           <FooterOption>
-            <Instagram fill='#fff' />@
-            {navData && navData.data.contactData.insta}
+            <Instagram fill='#fff' />@{navData?.data.contactData.insta}
           </FooterOption>
         </Link>
 
         <FooterOption>
           <Call fill='#fff' />
-          {navData && navData.data.contactData.phone}
+          {navData?.data.contactData.phone}
         </FooterOption>
         <Link href={`mailto:` + navData?.data.contactData.mail}>
           <FooterOption>
             <Mail fill='#fff' />
-            {navData && navData.data.contactData.mail}
+            {navData?.data.contactData.mail}
           </FooterOption>
         </Link>
       </MenuFooter>
