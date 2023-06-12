@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Instagram from '@public/icons/Instagram.svg';
@@ -27,6 +28,14 @@ const Navbar = ({ showNavbar, closeNavbar }) => {
     router.pathname.includes('/craxters') ? setPage(4) : null;
     router.pathname.includes('/archives') ? setPage(5) : null;
   }, [router.pathname]);
+
+  const baseURL = 'http://localhost:3001/contactDetails';
+  const [navData, setNavData] = useState(null);
+  useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setNavData(response.data);
+    });
+  }, []);
 
   return (
     <NavbarContainer showNavbar={showNavbar}>
@@ -68,21 +77,25 @@ const Navbar = ({ showNavbar, closeNavbar }) => {
       </MenuContainer>
 
       <MenuFooter>
-        <Link href='https://www.instagram.com/crac_bitspilani/?hl=en'>
+        <Link
+          href={`https://www.instagram.com/` + navData?.data.contactData.insta}
+        >
           <FooterOption>
-            <Instagram fill='#fff' />
-            @crac_bitspilani
+            <Instagram fill='#fff' />@
+            {navData && navData.data.contactData.insta}
           </FooterOption>
         </Link>
 
         <FooterOption>
           <Call fill='#fff' />
-          +91 98925 00584
+          {navData && navData.data.contactData.phone}
         </FooterOption>
-        <FooterOption>
-          <Mail fill='#fff' />
-          f20201798@bits.pilani-bits.ac.in
-        </FooterOption>
+        <Link href={`mailto:` + navData?.data.contactData.mail}>
+          <FooterOption>
+            <Mail fill='#fff' />
+            {navData && navData.data.contactData.mail}
+          </FooterOption>
+        </Link>
       </MenuFooter>
     </NavbarContainer>
   );

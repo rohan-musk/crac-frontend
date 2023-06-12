@@ -18,14 +18,6 @@ const MainLayout = ({ children }) => {
     setShowNavbar(false);
   };
 
-  const baseURL = 'http://localhost:3001/contactDetails';
-  const [post, setPost] = useState(null);
-  useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      console.log(response.data);
-    });
-  }, []);
-
   return (
     <MainLayoutContainer>
       <Navbar showNavbar={showNavbar} closeNavbar={closeNavbar} />
