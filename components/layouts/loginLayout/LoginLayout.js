@@ -1,5 +1,6 @@
 import jwt_decode from 'jwt-decode';
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import {
   LoginContainer,
   LoginButton,
@@ -8,10 +9,19 @@ import {
 } from './LoginLayout.styled';
 
 const LoginLayout = () => {
-  const handleCallbackResponse = (response) => {
+  const baseURL = 'http://localhost:3001/auth/googleLogin';
+  const [userData, setUserData] = useState(null);
+  const handleCallbackResponse = async (response) => {
     console.log(response.credential);
-    var userObject = jwt_decode(response.credential);
-    console.log(userObject);
+    await axios
+      .get(baseURL, {
+        params: {
+          tokenId: response.credential,
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+      });
   };
 
   useEffect(() => {
