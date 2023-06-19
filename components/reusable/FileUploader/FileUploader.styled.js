@@ -18,7 +18,15 @@ export const FileUploaderEditor = styled.div`
 export const FileUploaderBox = styled.div`
   height: 300px;
   border: 1px dashed #696969;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   border-radius: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  gap: 10px;
+  color: #696969;
   @media (min-width: 750px) {
     flex: 1;
   }

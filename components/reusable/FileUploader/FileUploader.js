@@ -13,13 +13,17 @@ import {
 } from './FileUploader.styled';
 import Edit from '@public/icons/Edit.svg';
 import Trash from '@public/icons/Trash.svg';
+import UploadFile from '@public/icons/UploadFile.svg';
 
 const FileUploader = () => {
   const [showIcons, setShowIcons] = useState(false);
   return (
     <FileUploaderContainer>
       <FileUploaderEditor>
-        <FileUploaderBox></FileUploaderBox>
+        <FileUploaderBox>
+          <UploadFile fill='#696969' />
+          Upload artwork
+        </FileUploaderBox>
         <FileUploaderContent>
           <FileUploaderInput placeholder='Title' />
           <FileUploaderInput placeholder='Medium' />
