@@ -1,10 +1,13 @@
 import React from 'react';
-import UserEditLayout from '@components/layouts/UserEditLayout/UserEditLayout';
+import UserEditLayout from '@components/layouts/userEditLayout/UserEditLayout';
+import AppLayout from '@components/layouts/appLayout/AppLayout';
 
 const index = () => {
   return (
     <div>
-      <UserEditLayout />
+      <AppLayout>
+        <UserEditLayout />
+      </AppLayout>
     </div>
   );
 };
