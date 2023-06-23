@@ -1,11 +1,11 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import instance from '@lib/utils/AxiosInstance';
 
 const AppLayout = ({ children }) => {
-  const baseURL = 'http://localhost:3001/auth/isloggedin';
   const [data, setData] = useState(null);
   useEffect(() => {
-    axios.get(baseURL).then((response) => {
+    instance.get('/auth/isloggedin').then((response) => {
       console.log(response.data);
     });
   }, []);
