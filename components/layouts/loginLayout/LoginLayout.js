@@ -12,7 +12,7 @@ import {
 const LoginLayout = () => {
   const [userData, setUserData] = useState(null);
   const handleCallbackResponse = async (response) => {
-    console.log(response.credential);
+    // console.log(response.credential);
     await instance
       .get('/auth/googleLogin', {
         params: {
@@ -20,8 +20,10 @@ const LoginLayout = () => {
         },
       })
       .then((response) => {
-        console.log(response.data);
-        Router.push('/useredit/1');
+        // console.log(
+        //   response.data.userData?.id || response.data.user.userData?.id
+        // );
+        Router.push('/useredit');
       });
   };
 
