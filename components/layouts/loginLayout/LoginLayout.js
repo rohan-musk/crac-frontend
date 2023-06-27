@@ -1,6 +1,7 @@
 import jwt_decode from 'jwt-decode';
 import React, { useState, useEffect } from 'react';
 import instance from '@lib/utils/AxiosInstance';
+import Router from 'next/router';
 import {
   LoginContainer,
   LoginButton,
@@ -20,6 +21,7 @@ const LoginLayout = () => {
       })
       .then((response) => {
         console.log(response.data);
+        Router.push('/useredit/1');
       });
   };
 
