@@ -1,16 +1,22 @@
 import jwt_decode from 'jwt-decode';
 import React, { useState, useEffect } from 'react';
 import instance from '@lib/utils/AxiosInstance';
-import Router from 'next/router';
+import Router, { useRouter } from 'next/router';
 import {
   LoginContainer,
   LoginButton,
   AdminOption,
   AdminButton,
+  AdminTrigger,
 } from './LoginLayout.styled';
+import Trigger from '@public/icons/Trigger.svg';
 
 const LoginLayout = () => {
   const [userData, setUserData] = useState(null);
+  const loginRouter = useRouter();
+  const {
+    query: { message },
+  } = loginRouter;
   const handleCallbackResponse = async (response) => {
     // console.log(response.credential);
     await instance
@@ -48,6 +54,12 @@ const LoginLayout = () => {
         Are you Admin?{' '}
         <AdminButton href={'/adminedit/' + 1}>Click Here</AdminButton>
       </AdminOption>
+      {message && (
+        <AdminTrigger>
+          <Trigger fill='#db4437' />
+          {message}
+        </AdminTrigger>
+      )}
     </LoginContainer>
   );
 };

@@ -8,7 +8,7 @@ export const LoginContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 `;
 export const LoginButton = styled(Link)`
   font-weight: 500;
@@ -23,6 +23,14 @@ export const AdminOption = styled.div`
   font-size: 1em;
 
   color: #727272;
+`;
+export const AdminTrigger = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75em;
+  color: #db4437;
 `;
 export const AdminButton = styled(Link)`
   color: #816cff;
