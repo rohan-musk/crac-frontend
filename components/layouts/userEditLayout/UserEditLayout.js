@@ -10,11 +10,11 @@ import {
   AboutMeEditor,
 } from './UserEditLayout.styled';
 
-const UserEditLayout = () => {
+const UserEditLayout = ({ data }) => {
   return (
     <div>
       <UserEditHeader>
-        <UserEditText>Welcome ROHAN ANIL MUSKAWAD!</UserEditText>
+        <UserEditText>Welcome {data?.data.userData.name}!</UserEditText>
         <UserEditHeaderButton href='/'>Sign Out</UserEditHeaderButton>
       </UserEditHeader>
       <UserEditContainer>
