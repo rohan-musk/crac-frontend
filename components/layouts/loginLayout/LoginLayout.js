@@ -1,10 +1,8 @@
-import jwt_decode from 'jwt-decode';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import instance from '@lib/utils/AxiosInstance';
 import Router, { useRouter } from 'next/router';
 import {
   LoginContainer,
-  LoginButton,
   AdminOption,
   AdminButton,
   AdminTrigger,
@@ -12,7 +10,6 @@ import {
 import Trigger from '@public/icons/Trigger.svg';
 
 const LoginLayout = () => {
-  const [userData, setUserData] = useState(null);
   const loginRouter = useRouter();
   const {
     query: { message },
