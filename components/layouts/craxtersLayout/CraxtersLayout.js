@@ -73,6 +73,29 @@ const CraxtersLayout = () => {
         </MemberLayout>
         <MemberHeading>Members</MemberHeading>
         <MemberLayout>
+          {Array.isArray(allUsers.previousMember)
+            ? allUsers.previousMember.map((e) => {
+                return (
+                  <Member href={'/craxters/' + e.id + '/work'}>
+                    <MemberImage>
+                      <Image
+                        loader={() => e.picture}
+                        src={e.picture}
+                        width={150}
+                        height={150}
+                        alt='Picture of the author'
+                        layout='fit'
+                        objectFit='cover'
+                      />
+                    </MemberImage>
+                    <MemberName>{e.name}</MemberName>
+                  </Member>
+                );
+              })
+            : null}
+        </MemberLayout>
+        <MemberHeading>Previous Members</MemberHeading>
+        <MemberLayout>
           {Array.isArray(allUsers.member)
             ? allUsers.member.map((e) => {
                 return (
@@ -94,21 +117,6 @@ const CraxtersLayout = () => {
               })
             : null}
         </MemberLayout>
-        <MemberHeading>Previous Members</MemberHeading>
-        {/* <MemberLayout>
-          <Member>
-            <MemberImage></MemberImage>
-            <MemberName>ROHAN ANIL MUSK</MemberName>
-          </Member>
-          <Member>
-            <MemberImage></MemberImage>
-            <MemberName>ROHAN MUSK</MemberName>
-          </Member>
-          <Member>
-            <MemberImage></MemberImage>
-            <MemberName>ROHAN MUSK</MemberName>
-          </Member>
-        </MemberLayout> */}
       </CraxtersBody>
     </CraxtersLayoutContainer>
   );
