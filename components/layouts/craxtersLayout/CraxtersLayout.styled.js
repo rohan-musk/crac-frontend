@@ -74,8 +74,8 @@ export const Member = styled(Link)`
   width: 220px;
 `;
 export const MemberImage = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 75px;
   overflow: hidden;
 `;

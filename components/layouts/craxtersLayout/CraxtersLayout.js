@@ -60,8 +60,8 @@ const CraxtersLayout = () => {
                       <Image
                         loader={() => e.picture}
                         src={e.picture}
-                        width={150}
-                        height={150}
+                        width={100}
+                        height={100}
                         alt='Picture of the author'
                         layout='fit'
                         objectFit='cover'
@@ -84,8 +84,8 @@ const CraxtersLayout = () => {
                       <Image
                         loader={() => e.picture}
                         src={e.picture}
-                        width={150}
-                        height={150}
+                        width={100}
+                        height={100}
                         alt='Picture of the author'
                         layout='fit'
                         objectFit='cover'
@@ -107,8 +107,8 @@ const CraxtersLayout = () => {
                       <Image
                         loader={() => e.picture}
                         src={e.picture}
-                        width={150}
-                        height={150}
+                        width={100}
+                        height={100}
                         alt='Picture of the author'
                         layout='fit'
                         objectFit='cover'
