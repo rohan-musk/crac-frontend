@@ -37,6 +37,7 @@ export const ArtistImage = styled.div`
   background-color: #555;
   border-radius: 75px;
   border: 4px solid #ffffff;
+  overflow: hidden;
 `;
 export const ArtistName = styled.div`
   padding-top: 24px;

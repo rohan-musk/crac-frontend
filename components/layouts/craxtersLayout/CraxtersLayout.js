@@ -37,7 +37,6 @@ const CraxtersLayout = () => {
           } else {
             users = { ...users, head: [...users.head, element] };
           }
-          console.log(users);
         }
       });
       setAllUsers(users);

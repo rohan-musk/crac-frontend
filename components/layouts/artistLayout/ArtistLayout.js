@@ -11,21 +11,46 @@ import {
   ArtistNavContainer,
 } from './ArtistLayout.styled';
 import { useRouter } from 'next/router';
+import axios from 'axios';
 
 const ArtistLayout = ({ children }) => {
   const [page, setPage] = useState(1);
   const router = useRouter();
+  const { id } = router.query;
+
   useEffect(() => {
     console.log(router.pathname);
     router.pathname.includes('/work') ? setPage(1) : null;
     router.pathname.includes('/about') ? setPage(2) : null;
   }, [router.pathname]);
+
+  const [artist, setArtist] = useState({});
+
+  useEffect(() => {
+    if (id) {
+      axios
+        .get(`http://localhost:3001/user/getUsers/${id}`)
+        .then((response) => {
+          setArtist(response.data.user[0]);
+        });
+    }
+  }, [id]);
   return (
     <ArtistLayoutContainer>
       <ArtistLayoutHeader>
         <ArtistDetails>
-          <ArtistImage></ArtistImage>
-          <ArtistName>ROHAN ANIL MUSKAWAD</ArtistName>
+          <ArtistImage>
+            <Image
+              loader={() => artist?.picture}
+              src={artist?.picture}
+              width={142}
+              height={142}
+              alt='Picture of the author'
+              layout='fit'
+              objectFit='cover'
+            />
+          </ArtistImage>
+          <ArtistName>{artist?.name}</ArtistName>
         </ArtistDetails>
         <Image src='/images/artist.png' layout='fill' objectFit='cover' />
       </ArtistLayoutHeader>
@@ -35,7 +60,7 @@ const ArtistLayout = ({ children }) => {
             option='1'
             selectedOption={page}
             onClick={() => setPage(1)}
-            href={'/craxters/' + 1 + '/work'}
+            href={'/craxters/' + id + '/work'}
           >
             Work
           </ArtistNavOption>
@@ -43,7 +68,7 @@ const ArtistLayout = ({ children }) => {
             option='2'
             selectedOption={page}
             onClick={() => setPage(2)}
-            href={'/craxters/' + 1 + '/about'}
+            href={'/craxters/' + id + '/about'}
           >
             About
           </ArtistNavOption>
