@@ -1,7 +1,8 @@
 import React from 'react';
+import FestLayout from '@components/layouts/festLayout/FestLayout';
 
 const Bosm = () => {
-  return <div>BOSM</div>;
+  return <FestLayout />;
 };
 
 export default Bosm;
