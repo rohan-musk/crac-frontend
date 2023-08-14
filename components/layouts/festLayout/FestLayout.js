@@ -7,11 +7,11 @@ import {
   FestLayoutBody,
 } from './FestLayout.styled';
 
-const FestLayout = () => {
+const FestLayout = ({ bannerImage }) => {
   return (
     <FestLayoutContainer>
       <FestLayoutHeader>
-        <Image src='/images/oasisBanner.png' layout='fill' objectFit='cover' />
+        <Image src={bannerImage} layout='fill' objectFit='cover' />
       </FestLayoutHeader>
       <ImageLayout fest />
     </FestLayoutContainer>
