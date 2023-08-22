@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import {
   CraxtersLayoutContainer,
   CraxtersLayoutHeader,
@@ -54,7 +56,18 @@ const CraxtersLayout = () => {
         <MemberHeading>Heads</MemberHeading>
         <MemberLayout>
           {loading ? (
-            <div>loading</div>
+            <Skeleton
+              width={100}
+              height={100}
+              circle
+              count={5}
+              inline
+              style={{
+                margin: '20px',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            />
           ) : Array.isArray(allUsers.head) ? (
             allUsers.head.map((e) => {
               return (
@@ -80,7 +93,18 @@ const CraxtersLayout = () => {
         <MemberHeading>Members</MemberHeading>
         <MemberLayout>
           {loading ? (
-            <div>loading</div>
+            <Skeleton
+              width={100}
+              height={100}
+              circle
+              count={5}
+              inline
+              style={{
+                margin: '20px',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            />
           ) : Array.isArray(allUsers.previousMember) ? (
             allUsers.previousMember.map((e) => {
               return (
@@ -105,7 +129,18 @@ const CraxtersLayout = () => {
         <MemberHeading>Previous Members</MemberHeading>
         <MemberLayout>
           {loading ? (
-            <div>loading</div>
+            <Skeleton
+              width={100}
+              height={100}
+              circle
+              count={5}
+              inline
+              style={{
+                margin: '20px',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            />
           ) : Array.isArray(allUsers.member) ? (
             allUsers.member.map((e) => {
               return (
