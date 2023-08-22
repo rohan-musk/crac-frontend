@@ -43,6 +43,7 @@ const CraxtersLayout = () => {
         }
       });
       setAllUsers(users);
+      console.log(users);
       setLoading(false);
     });
   }, []);
@@ -110,8 +111,8 @@ const CraxtersLayout = () => {
         <MemberLayout>
           {loading ? (
             <UserLoader count={5} />
-          ) : Array.isArray(allUsers.previousMember) ? (
-            allUsers.previousMember.map((e) => {
+          ) : Array.isArray(allUsers.member) ? (
+            allUsers.member.map((e) => {
               return (
                 <Member href={'/craxters/' + e.id + '/work'} key={e.id}>
                   <MemberImage>
@@ -135,8 +136,8 @@ const CraxtersLayout = () => {
         <MemberLayout>
           {loading ? (
             <UserLoader count={5} />
-          ) : Array.isArray(allUsers.member) ? (
-            allUsers.member.map((e) => {
+          ) : Array.isArray(allUsers.previousMember) ? (
+            allUsers.previousMember.map((e) => {
               return (
                 <Member href={'/craxters/' + e.id + '/work'} key={e.id}>
                   <MemberImage>
