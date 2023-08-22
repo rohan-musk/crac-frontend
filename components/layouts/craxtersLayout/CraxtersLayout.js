@@ -47,6 +47,33 @@ const CraxtersLayout = () => {
     });
   }, []);
 
+  const UserLoader = ({ count = 1 }) => {
+    return Array.apply(null, Array(count)).map((i) => (
+      <div
+        style={{
+          display: 'flex',
+          gap: '10px',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+        key={i}
+      >
+        <Skeleton
+          width={100}
+          height={100}
+          circle
+          inline
+          style={{
+            margin: '0px 20px',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        />
+        <Skeleton width={150} height={16} />
+      </div>
+    ));
+  };
+
   return (
     <CraxtersLayoutContainer>
       <CraxtersLayoutHeader>
@@ -56,18 +83,7 @@ const CraxtersLayout = () => {
         <MemberHeading>Heads</MemberHeading>
         <MemberLayout>
           {loading ? (
-            <Skeleton
-              width={100}
-              height={100}
-              circle
-              count={5}
-              inline
-              style={{
-                margin: '20px',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            />
+            <UserLoader count={5} />
           ) : Array.isArray(allUsers.head) ? (
             allUsers.head.map((e) => {
               return (
@@ -93,22 +109,11 @@ const CraxtersLayout = () => {
         <MemberHeading>Members</MemberHeading>
         <MemberLayout>
           {loading ? (
-            <Skeleton
-              width={100}
-              height={100}
-              circle
-              count={5}
-              inline
-              style={{
-                margin: '20px',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            />
+            <UserLoader count={5} />
           ) : Array.isArray(allUsers.previousMember) ? (
             allUsers.previousMember.map((e) => {
               return (
-                <Member href={'/craxters/' + e.id + '/work'}>
+                <Member href={'/craxters/' + e.id + '/work'} key={e.id}>
                   <MemberImage>
                     <Image
                       loader={() => e.picture}
@@ -129,22 +134,11 @@ const CraxtersLayout = () => {
         <MemberHeading>Previous Members</MemberHeading>
         <MemberLayout>
           {loading ? (
-            <Skeleton
-              width={100}
-              height={100}
-              circle
-              count={5}
-              inline
-              style={{
-                margin: '20px',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            />
+            <UserLoader count={5} />
           ) : Array.isArray(allUsers.member) ? (
             allUsers.member.map((e) => {
               return (
-                <Member href={'/craxters/' + e.id + '/work'}>
+                <Member href={'/craxters/' + e.id + '/work'} key={e.id}>
                   <MemberImage>
                     <Image
                       loader={() => e.picture}
