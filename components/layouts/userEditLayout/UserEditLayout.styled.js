@@ -52,5 +52,20 @@ export const AboutMeEditor = styled.textarea`
   font-size: 1em;
   border-radius: 10px;
   background: transparent;
-  border-color: #696969;
+  border-color: ${(props) =>
+    props.color === 0
+      ? '#696969'
+      : props.color === 1
+      ? '#ffbb00'
+      : props.color === 2
+      ? '#00ff80'
+      : '#ff0400'};
+  outline-color: ${(props) =>
+    props.color === 0
+      ? '#696969'
+      : props.color === 1
+      ? '#ffbb00'
+      : props.color === 2
+      ? '#00ff80'
+      : '#ff0400'};
 `;

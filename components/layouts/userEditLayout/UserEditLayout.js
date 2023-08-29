@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import EditContainer from '@components/displays/editContainer/EditContainer';
 import LinksEditor from '@components/reusable/LinksEditor/LinksEditor';
 import FileUploader from '@components/reusable/FileUploader/FileUploader';
@@ -12,6 +12,8 @@ import {
 } from './UserEditLayout.styled';
 
 const UserEditLayout = ({ data }) => {
+  const [aboutColor, setAboutColor] = useState(0);
+  const [aboutMessage, setAboutMessage] = useState(null);
   return (
     <div>
       <UserEditHeader>
@@ -21,7 +23,10 @@ const UserEditLayout = ({ data }) => {
       <UserEditContainer>
         <EditContainer tag='About Me' pad>
           <AboutMeEditor
-            onChange={(event) =>
+            color={aboutColor}
+            onChange={(event) => {
+              setAboutColor(1);
+              setAboutMessage(null);
               axios
                 .patch(
                   `http://localhost:3001/artist/editArtistAbout/${data.data.userData.id}`,
@@ -35,10 +40,17 @@ const UserEditLayout = ({ data }) => {
                     withCredentials: true,
                   }
                 )
-                .then((response) => console.log(response.data))
-                .catch((error) => console.error(error))
-            }
+                .then((response) => {
+                  setAboutColor(2);
+                  setAboutMessage(response.data.data.message);
+                  console.log(aboutMessage);
+                })
+                .catch(() => {
+                  setAboutColor(3);
+                });
+            }}
           />
+          <p style={{ color: 'green' }}>{aboutMessage}</p>
         </EditContainer>
         <EditContainer tag='Links' gap>
           <LinksEditor title='Instagram' link='@rohanmusk' />
