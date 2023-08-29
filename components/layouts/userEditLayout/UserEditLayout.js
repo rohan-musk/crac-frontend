@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import EditContainer from '@components/displays/editContainer/EditContainer';
 import LinksEditor from '@components/reusable/LinksEditor/LinksEditor';
 import FileUploader from '@components/reusable/FileUploader/FileUploader';
+import axios from 'axios';
 import {
   UserEditHeader,
   UserEditText,
@@ -19,7 +20,25 @@ const UserEditLayout = ({ data }) => {
       </UserEditHeader>
       <UserEditContainer>
         <EditContainer tag='About Me' pad>
-          <AboutMeEditor />
+          <AboutMeEditor
+            onChange={(event) =>
+              axios
+                .patch(
+                  `http://localhost:3001/artist/editArtistAbout/${data.data.userData.id}`,
+                  {
+                    aboutme: event.target.value,
+                  },
+                  {
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    withCredentials: true,
+                  }
+                )
+                .then((response) => console.log(response.data))
+                .catch((error) => console.error(error))
+            }
+          />
         </EditContainer>
         <EditContainer tag='Links' gap>
           <LinksEditor title='Instagram' link='@rohanmusk' />
