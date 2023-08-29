@@ -7,6 +7,7 @@ import {
   LinkEditorInput,
 } from './LinksEditor.styled';
 import Edit from '@public/icons/Edit.svg';
+import Tick from '@public/icons/Tick.svg';
 
 const LinksEditor = ({ title, link }) => {
   const [editOption, setEditOption] = useState(false);
@@ -23,7 +24,7 @@ const LinksEditor = ({ title, link }) => {
           setEditOption(!editOption);
         }}
       >
-        <Edit />
+        {!editOption ? <Edit /> : <Tick />}
       </LinkEditIcon>
     </LinkEditorContainer>
   );

@@ -10,6 +10,7 @@ import {
   UserEditContainer,
   AboutMeEditor,
 } from './UserEditLayout.styled';
+import Tick from '@public/icons/Tick.svg';
 
 const UserEditLayout = ({ data }) => {
   const [aboutColor, setAboutColor] = useState(0);
@@ -50,7 +51,17 @@ const UserEditLayout = ({ data }) => {
                 });
             }}
           />
-          <p style={{ color: 'green' }}>{aboutMessage}</p>
+          {aboutMessage ? (
+            <p
+              style={{
+                color: 'green',
+                display: 'flex',
+              }}
+            >
+              <Tick fill='green' />
+              {aboutMessage}
+            </p>
+          ) : null}
         </EditContainer>
         <EditContainer tag='Links' gap>
           <LinksEditor title='Instagram' link='@rohanmusk' />
