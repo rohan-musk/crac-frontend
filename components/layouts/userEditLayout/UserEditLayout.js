@@ -64,8 +64,12 @@ const UserEditLayout = ({ data }) => {
           ) : null}
         </EditContainer>
         <EditContainer tag='Links' gap>
-          <LinksEditor title='Instagram' link='@rohanmusk' />
-          <LinksEditor title='Mail' link='rohanmuskawad1201@gmail.com' />
+          <LinksEditor title='Instagram' link='@rohanmusk' data={data} />
+          <LinksEditor
+            title='Mail'
+            link='rohanmuskawad1201@gmail.com'
+            data={data}
+          />
         </EditContainer>
         <EditContainer tag='Artworks' pad>
           <FileUploader />
