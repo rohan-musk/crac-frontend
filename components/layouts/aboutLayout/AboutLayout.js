@@ -8,24 +8,25 @@ import {
   AboutLink,
 } from './AboutLayout.styled';
 
-const AboutLayout = () => {
+const AboutLayout = ({ artistData }) => {
   return (
     <AboutLayoutContainer>
       <AboutText>
-        I am a software developer from BITS Pilani who enjoys making artworks in
+        {/* I am a software developer from BITS Pilani who enjoys making artworks in
         his free time. I had the golden opportunity of being the Oasis
         Coordinator of CrAC in 2022. I am also the developer of this website.
         Wanna have a chat? Feel free to DM me on my Insta or mail me on my
-        email.
+        email. */}
+        {artistData?.aboutMe}
       </AboutText>
       <AboutLinks>
-        <AboutLink href='https://www.instagram.com/rohanmusk/?next=%2F'>
+        <AboutLink href='https://www.instagram.com/'>
           <Instagram />
-          @rohanmusk
+          {artistData?.instaID}
         </AboutLink>
         <AboutLink href='https://www.instagram.com/crac_bitspilani/?hl=en'>
           <Mail />
-          rohanmuskawad1201@gmail.com
+          {artistData?.mail}
         </AboutLink>
       </AboutLinks>
     </AboutLayoutContainer>

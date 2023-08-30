@@ -17,6 +17,7 @@ const ArtistLayout = ({ children }) => {
   const [page, setPage] = useState(1);
   const router = useRouter();
   const { id } = router.query;
+  const [newChildren, setNewChildren] = useState(null);
 
   useEffect(() => {
     console.log(router.pathname);
@@ -33,8 +34,20 @@ const ArtistLayout = ({ children }) => {
         .then((response) => {
           setArtist(response.data.user[0]);
         });
+
+      axios
+        .get(`http://localhost:3001/artist/getArtist/${id}`)
+        .then((response) => {
+          console.log(response.data.artist[0]);
+          setNewChildren(
+            React.cloneElement(children, {
+              artistData: response.data.artist[0],
+            })
+          );
+        });
     }
   }, [id]);
+
   return (
     <ArtistLayoutContainer>
       <ArtistLayoutHeader>
@@ -42,7 +55,10 @@ const ArtistLayout = ({ children }) => {
           <ArtistImage>
             <Image
               loader={() => artist?.picture}
-              src={artist?.picture}
+              src={
+                artist?.picture ||
+                'https://cdn-icons-png.flaticon.com/512/149/149071.png'
+              }
               width={142}
               height={142}
               alt='Picture of the author'
@@ -74,7 +90,7 @@ const ArtistLayout = ({ children }) => {
           </ArtistNavOption>
         </ArtistNav>
       </ArtistNavContainer>
-      {children}
+      {newChildren}
     </ArtistLayoutContainer>
   );
 };
