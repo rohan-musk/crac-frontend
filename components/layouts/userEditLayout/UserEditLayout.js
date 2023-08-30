@@ -64,11 +64,19 @@ const UserEditLayout = ({ data }) => {
           ) : null}
         </EditContainer>
         <EditContainer tag='Links' gap>
-          <LinksEditor title='Instagram' link='@rohanmusk' data={data} />
+          <LinksEditor
+            title='Instagram'
+            link='@rohanmusk'
+            data={data}
+            apiRoute='http://localhost:3001/artist/editArtistInsta/'
+            apiQuery='insta'
+          />
           <LinksEditor
             title='Mail'
             link='rohanmuskawad1201@gmail.com'
             data={data}
+            apiRoute='http://localhost:3001/artist/editArtistEmail/'
+            apiQuery='mail'
           />
         </EditContainer>
         <EditContainer tag='Artworks' pad>

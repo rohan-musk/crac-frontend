@@ -10,7 +10,7 @@ import axios from 'axios';
 import Edit from '@public/icons/Edit.svg';
 import Tick from '@public/icons/Tick.svg';
 
-const LinksEditor = ({ title, link, data }) => {
+const LinksEditor = ({ title, link, data, apiRoute, apiQuery }) => {
   const [editOption, setEditOption] = useState(false);
   const [editValue, setEditValue] = useState(link);
   return (
@@ -38,9 +38,9 @@ const LinksEditor = ({ title, link, data }) => {
             onClick={() => {
               axios
                 .patch(
-                  `http://localhost:3001/artist/editArtistInsta/${data.data.userData.id}`,
+                  `${apiRoute + data.data.userData.id}`,
                   {
-                    insta: editValue,
+                    [apiQuery]: editValue,
                   },
                   {
                     headers: {
