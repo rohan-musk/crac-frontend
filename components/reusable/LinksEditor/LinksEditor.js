@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   LinkEditorContainer,
   LinkEditorTitle,
@@ -13,6 +13,10 @@ import Tick from '@public/icons/Tick.svg';
 const LinksEditor = ({ title, link, data, apiRoute, apiQuery }) => {
   const [editOption, setEditOption] = useState(false);
   const [editValue, setEditValue] = useState(link);
+
+  useEffect(() => {
+    setEditValue(link);
+  }, [link]);
   return (
     <LinkEditorContainer>
       <LinkEditorTitle>{title}</LinkEditorTitle>

@@ -13,6 +13,20 @@ import {
 import Tick from '@public/icons/Tick.svg';
 
 const UserEditLayout = ({ data }) => {
+  const [artistData, setArtistData] = useState(null);
+  const [artistAbout, setArtistAbout] = useState('');
+
+  useEffect(() => {
+    if (data?.data.userData.id) {
+      axios
+        .get(`http://localhost:3001/artist/getArtist/${data.data.userData.id}`)
+        .then((response) => {
+          setArtistData(response.data.artist[0]);
+          setArtistAbout(response.data.artist[0].aboutMe);
+        });
+    }
+  }, [data?.data.userData.id]);
+
   const [aboutColor, setAboutColor] = useState(0);
   const [aboutMessage, setAboutMessage] = useState(null);
   return (
@@ -24,10 +38,12 @@ const UserEditLayout = ({ data }) => {
       <UserEditContainer>
         <EditContainer tag='About Me' pad>
           <AboutMeEditor
+            value={artistAbout}
             color={aboutColor}
             onChange={(event) => {
               setAboutColor(1);
               setAboutMessage(null);
+              setArtistAbout(event.target.value);
               axios
                 .patch(
                   `http://localhost:3001/artist/editArtistAbout/${data.data.userData.id}`,
@@ -66,14 +82,14 @@ const UserEditLayout = ({ data }) => {
         <EditContainer tag='Links' gap>
           <LinksEditor
             title='Instagram'
-            link='@rohanmusk'
+            link={artistData?.instaID}
             data={data}
             apiRoute='http://localhost:3001/artist/editArtistInsta/'
             apiQuery='insta'
           />
           <LinksEditor
             title='Mail'
-            link='rohanmuskawad1201@gmail.com'
+            link={artistData?.mail}
             data={data}
             apiRoute='http://localhost:3001/artist/editArtistEmail/'
             apiQuery='mail'
